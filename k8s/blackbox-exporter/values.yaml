@@ -20,13 +20,6 @@ serviceTargetPort: 9115
 blackboxExporterFiles:
   blackboxConfig:
     modules:
-      http_2xx:
-        prober: http
-        http:
-      http_post_2xx:
-        prober: http
-        http:
-          method: GET
       http_2xx_harness:
         prober: http
         timeout: 5s
