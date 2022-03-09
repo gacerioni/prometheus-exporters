@@ -51,6 +51,7 @@ spec:
       containers:
       - name: {{.Values.name}}
         image: {{.Values.image}}
+        args: ["--config.file=/etc/blackbox_exporter/config/blackbox.yml"]
         volumeMounts:
         - name: config-volume
           mountPath: /etc/blackbox_exporter/config
