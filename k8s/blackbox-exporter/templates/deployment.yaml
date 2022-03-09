@@ -4,5 +4,5 @@ metadata:
   name: {{.Values.name}}
 data:
   blackbox.yml: |
-{{.Values.blackboxExporterFiles.blackboxConfig | toYaml | indent 2}}
+{{.Values.blackboxExporterFiles.blackboxConfig | toYaml | indent 4}}
 ---
