@@ -3,5 +3,6 @@ kind: ConfigMap
 metadata:
   name: {{.Values.name}}
 data:
-{{.Values.blackboxExporterFiles.blackboxConfig | toYaml | indent 2}}
+  blackbox.yml: |
+{{.Values.blackboxExporterFiles.blackboxConfig | indent 2}}
 ---
