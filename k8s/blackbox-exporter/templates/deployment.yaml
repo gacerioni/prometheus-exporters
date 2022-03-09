@@ -4,7 +4,7 @@ metadata:
   name: {{.Values.name}}-configmap
 data:
   blackbox.yml: |
-{{.Values.blackboxExporterFiles.blackboxConfig | toYaml | indent 4}}
+{{.Values.blackboxExporterFiles.blackboxConfig | indent 4}}
 ---
 
 {{- if .Values.env.secrets}}

@@ -18,7 +18,7 @@ servicePort: 9115
 serviceTargetPort: 9115
 
 blackboxExporterFiles:
-  blackboxConfig:
+  blackboxConfig: |-
     modules:
       http_2xx_harness:
         prober: http
