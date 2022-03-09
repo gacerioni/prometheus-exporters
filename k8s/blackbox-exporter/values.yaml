@@ -31,5 +31,5 @@ blackboxExporterFiles:
         prober: http
         timeout: 10s
         http:
-          valid_status_codes: [2xx]
+          valid_status_codes: ["2xx"]
           method: GET
