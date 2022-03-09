@@ -66,9 +66,9 @@ spec:
         {{- end}}
         {{- end}}
       volumes:
-    - name: config-volume
-      configMap:
-        name: {{.Values.name}}-configmap
-        items:
-        - key: CONFIG_FILE
-          path: blackbox.yml
+        - name: config-volume
+          configMap:
+            name: {{.Values.name}}-configmap
+            items:
+            - key: CONFIG_FILE
+              path: blackbox.yml
