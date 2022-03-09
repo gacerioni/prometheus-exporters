@@ -18,7 +18,7 @@ servicePort: 80
 serviceTargetPort: 80
 
 blackboxExporterFiles:
-  blackbox.yml:
+  blackboxConfig:
     modules:
       http_2xx:
         prober: http
