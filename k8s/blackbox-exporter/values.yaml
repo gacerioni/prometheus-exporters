@@ -27,9 +27,3 @@ blackboxExporterFiles:
         prober: http
         http:
           method: GET
-      http_get_harness:
-        prober: http
-        timeout: 10s
-        http:
-          valid_status_codes: ["2xx"]
-          method: GET
