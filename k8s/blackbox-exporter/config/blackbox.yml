@@ -1,3 +1,4 @@
+# harness.io/skip-file-for-deploy
 modules:
   http_2xx:
     prober: http
