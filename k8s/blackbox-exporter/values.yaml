@@ -1,0 +1,29 @@
+name: blackbox-exporter
+replicas: 1
+
+image: ${artifact.metadata.image}
+dockercfg: ${artifact.source.dockerconfig}
+
+createNamespace: true
+namespace: ${infra.kubernetes.namespace}
+
+# Service Type allow you to specify what kind of service you want.
+# Possible values for ServiceType are:
+# ClusterIP | NodePort | LoadBalancer | ExternalName
+serviceType: ClusterIP
+
+# A Service can map an incoming port to any targetPort.
+# targetPort is where application is listening on inside the container.
+servicePort: 80
+serviceTargetPort: 80
+
+blackboxExporterFiles:
+  blackbox.yml:
+    modules:
+      http_2xx:
+        prober: http
+        http:
+      http_post_2xx:
+        prober: http
+        http:
+          method: GET
