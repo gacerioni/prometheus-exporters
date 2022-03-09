@@ -70,5 +70,5 @@ spec:
           configMap:
             name: {{.Values.name}}-configmap
             items:
-            - key: CONFIG_FILE
+            - key: blackbox.yml
               path: blackbox.yml
